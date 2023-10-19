@@ -1,91 +1,111 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "utf-8">
-        <title> Représentation de mouvement d'arts martiaux (Tai Chi)</title>
+<head>
+    <meta charset="utf-8">
+    <title>Représentation de mouvement d'arts martiaux (Tai Chi)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .team-member {
+            width: calc(33.33% - 20px); 
+            margin: 10px; 
+        }
+        .circular-image {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            overflow: hidden; 
+        }
+        .circular-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Nous joindre</a></li>
+                <li><a href="#">groupe 13</a></li>
+                <li><a href="#">groupe 12</a></li>
+                <li id="logo"><a href="#">IMTai Chi</a></li>
+            </ul>
+        </nav>
 
-        <link rel="stylesheet" href="style.css">
+        <div id="imagePrincipale">
+            <h1>IMTai Chi</h1>
+            <div id="premiertrait"></div>
+            <button>Accès projet 12</button>
+            <button>Accès projet 13</button>
+        </div>
+    </header>
 
+    <section id="Description projet">
+        <div id="Description IMT Atlantique">
+            <h2>Description IMT Atlantique</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere maxime labore, doloribus velit amet aperiam quasi ipsa id. Molestias nemo vitae numquam, quaerat est autem magni quas hic praesentium? Laboriosam nisi facere doloremque facilis aut esse qui consectetur deserunt nesciunt!</p>
+        </div>
 
+        <div id="Description Ecole Wushu">
+            <h2>Description Ecole Wushu</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda harum eaque similique fugit fuga ad obcaecati aliquam eos earum fugiat quia accusantium necessitatibus iste aut eligendi eius voluptatum, doloremque dignissimos repellat. Maiores rem animi incidunt aspernatur delectus quibusdam distinctio exercitationem?</p>
+        </div>
+    </section>
 
-    </head>
+    <section id="Equipe 12">
+        <h2>Equipe 12</h2>
 
-    <body>
-
-        <header>
-            <nav>
-                <ul>
-                    <li><a href = "#">Nous joindre</a></li>
-                    <li><a href = "#">groupe 13</a></li>
-                    <li><a href = "#">groupe 12</a></li>
-                    <li id="logo"><a href = "#">IMTai Chi</a></li>
-                </ul>
-            </nav>
-
-            <div id="imagePrincipale">
-                <h1> IMTai Chi</h1>
-                <div id="premiertrait"></div>
-                <button>Accès projet 12</button>
-                <button>Accès projet 13</button>
-
+        <div class="team-container">
+            <div class="team-member">
+                <div class="circular-image">
+                    <img src="media/Nathan.jpeg" alt="Nathan">
+                </div>
             </div>
- 
-        </header>
-
-        <section id="Description projet">
-            <div id="Description IMT Atlantique">
-                <h2>Description IMT Atlantique</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere maxime labore, doloribus velit amet aperiam quasi ipsa id. Molestias nemo vitae numquam, quaerat est autem magni quas hic praesentium? Laboriosam nisi facere doloremque facilis aut esse qui consectetur deserunt nesciunt!</p>
+    
+            <div class="team-member">
+                <div class="circular-image">
+                    <img src="media/Jean David.jpeg" alt="Jean David">
+                </div>
             </div>
-
-            <div id="Description Ecole Wushu">
-                <h2>Description Ecole Wushu</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda harum eaque similique fugit fuga ad obcaecati aliquam eos earum fugiat quia accusantium necessitatibus iste aut eligendi eius voluptatum, doloremque dignissimos repellat. Maiores rem animi incidunt aspernatur delectus quibusdam distinctio exercitationem?</p>
+    
+            <div class="team-member">
+                <div class="circular-image">
+                    <img src="media/Lea.jpeg" alt="Léa">
+                </div>
             </div>
-
-        </section>
-
-        <sectionc id="Equipe 12">
-            <h2>Equipe 12</h2>
-
-            <div class="Equipe 12">
-                <h4>Nathan</h4>
-                <a href="#"><img src="media/Nathan.jpeg" alt="Nathan"></a>
+        </div>
+    
+        <div class="team-container">
+            <div class="team-member">
+                <div class="circular-image">
+                    <img src="media/Yuntian.jpeg" alt="Yuntian">
+                </div>
             </div>
-
-            <div class="Equipe 12">
-                <h4>Jean David</h4>
-                <a href="#"><img src="media/Jean David.jpeg" alt="Jean David"></a>
+    
+            <div class= "team-member">
+                <div class="circular-image">
+                    <img src="media/Raphaël.jpeg" alt="Raphaël">
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="Equipe 12">
-                <h4>Léa</h4>
-                <a href="#"><img src="media/Lea.jpeg" alt="Lea"></a>
-            </div>
+    <section id="Equipe 13">
+        <h2>Equipe 13</h2>
 
-            <div class="Equipe 12">
-                <h4>Yuntian</h4>
-                <a href="#"><img src="media/Yuntian.jpeg" alt="Yuntian"></a>
-            </div>
+        
 
-            <div class="Equipe 12">
-                <h4>Raphaël</h4>
-                <a href="#"><img src="media/Raphaël.jpeg" alt="Raphaël"></a>
-            </div>
+    </section>
 
-        </section>
-            
-        <sectionc id="Equipe 13">
-            <h2>Equipe 13</h2>
-
-        </section>
-
-        <footer>
-
-        </footer>
-
-
-    </body>
-
-
+    <footer>
+       
+    </footer>
+</body>
 </html>
+
