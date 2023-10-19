@@ -100,7 +100,6 @@ button{
 .team-member{
     width: calc(33.33% - 20px); 
     margin: 10px; 
-    justify-content: center;
 }
 .circular-image{
     width: 150px; 
