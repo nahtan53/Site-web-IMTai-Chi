@@ -90,6 +90,13 @@ button{
     margin-top: 150px;
 }
 
+.description-image{
+    float: left; 
+    margin-right: 20px; 
+    width: 160px; 
+    height: auto;
+}
+
 /**************************** EQUIPES ****************************/
 
 .team-container{
@@ -106,6 +113,7 @@ button{
     height: 150px; 
     border-radius: 50%; 
     overflow: hidden; 
+    float: left;
 }
 .circular-image img{
     width: 100%;
@@ -113,9 +121,21 @@ button{
     object-fit: cover; 
 }
 
-.description-image{
-    float: left; 
-    margin-right: 20px; 
-    width: 160px; 
+.descritpion-member{
+    float: right;
     height: auto;
+    width: auto;
+}
+
+.member-first-name{
+    text-align: center;
+    margin: 0px 0px;
+}
+.member-last-name{
+    text-align: center;
+    margin: 0px 0px;
+}
+.member-role{
+    text-align: center;
+    margin: 0px 0px;
 }
