@@ -1,84 +1,97 @@
+/* Importation de la police Google */
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Dancing+Script&display=swap');
 
-body{
+/* Réinitialisation des styles par défaut du navigateur */
+body {
     font-family: 'Advent Pro', sans-serif;
-    padding: 0; margin: 0;
-
+    margin: 0;
+    padding: 0;
+    color: #333; /* Couleur du texte principale */
 }
+
+/* Suppression des puces de liste */
 ul {
     margin: 0;
     padding: 0;
 }
-li{
-    list-style-type: none;
-}
-h2{
+
+/* Mise en forme des en-têtes de section */
+h2 {
     text-transform: uppercase;
     text-align: center;
     padding-top: 30px;
     font-size: 2em;
+    color: #555; /* Couleur du titre */
 }
 
-a{
+/* Styles des liens */
+a {
     text-decoration: none;
-    color: black;
+    color: #0066cc; /* Couleur des liens */
 }
-
 
 /**************************** NAVBAR ****************************/
 
-nav{
+/* Styles de la barre de navigation */
+nav {
     overflow: hidden;
-    background-color: darkgray;
+    background-color: #333; /* Couleur de fond de la barre de navigation */
     position: fixed;
     opacity: 0.9;
     width: 100%;
 }
 
-header li{
+/* Styles des éléments de la barre de navigation */
+header li {
     float: right;
     font-size: 1.2em;
 }
 
-header li a{
+header li a {
     text-decoration: none;
     display: block;
     text-align: center;
     padding: 18px 16px;
+    color: white; /* Couleur des liens de navigation */
 }
 
+/* Styles du logo */
 #logo {
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     float: left;
-
+    color: #ffcc00; /* Couleur du logo */
 }
 
 /**************************** IMAGE PRINCIPALE ****************************/
 
-#imagePrincipale{
+/* Styles de la section principale avec l'image */
+#imagePrincipale {
     padding-top: 60px;
     background: url(media/Tai\ Chi.jpeg) no-repeat fixed 50% 50%;
     background-size: cover;
     height: 799px;
     text-align: center;
-
 }
 
-h1{
+/* Styles du titre principal */
+h1 {
     font-family: 'Dancing Script', cursive;
     text-align: center;
-    color: antiquewhite;
-    font-size: 6em; margin-top: 110px;
+    color: #a09f9c; /* Couleur du titre principal */
+    font-size: 6em;
+    margin-top: 110px;
 }
-button{
+
+/* Styles des boutons */
+button {
     display: inline-block;
-    background-color: darkgrey;
+    background-color: rgb(118, 130, 163); /* Couleur du bouton */
     border-radius: 10px;
-    color: #eeeeee;
+    color: #333; /* Couleur du texte du bouton */
     text-align: center;
     font-size: 28px;
-    padding: 0px;
+    padding: 10px; /* Espacement interne du bouton */
     width: 200px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -87,55 +100,112 @@ button{
     cursor: pointer;
     margin-left: 50px;
     margin-right: 50px;
-    margin-top: 150px;
+    margin-top: 30px; /* Espacement externe du bouton */
 }
 
-.description-image{
-    float: left; 
-    margin-right: 20px; 
-    width: 160px; 
+/* Styles des images de description */
+.description-image {
+    float: left;
+    margin-right: 20px;
+    width: 160px;
     height: auto;
+    border: 2px solid #333; /* Bordure autour de l'image */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 /**************************** EQUIPES ****************************/
 
-.team-container{
+/* Styles du conteneur d'équipes */
+.team-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.team-member{
-    width: calc(33.33% - 20px); 
-    margin: 10px; 
+
+/* Styles des membres d'équipe */
+.team-member {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    display: flex;
+    align-items: center;
 }
-.circular-image{
-    width: 150px; 
-    height: 150px; 
-    border-radius: 50%; 
-    overflow: hidden; 
-    float: left;
+
+/* Styles des images circulaires */
+.circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    border: 2px solid #333; /* Bordure autour de l'image */
 }
-.circular-image img{
+
+.circular-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
-.descritpion-member{
+/* Styles des descriptions des membres */
+.description-member {
     float: right;
-    height: auto;
-    width: auto;
+    text-align: left;
+    width: 60%;
+    padding: 20px;
+    background-color: #f5f5f5; /* Couleur de fond de la description */
+    border: 2px solid #ccc; /* Bordure autour de la description */
+    border-radius: 10px;
+    font-family: 'Advent Pro', sans-serif; /* Police pour la description-member */
 }
 
-.member-first-name{
-    text-align: center;
-    margin: 0px 0px;
+/* Styles du texte à l'intérieur des descriptions */
+.description-member p {
+    margin: 0 0 10px; /* Marge pour les paragraphes à l'intérieur de la description-member */
+    line-height: 1.4; /* Hauteur de ligne pour améliorer la lisibilité */
 }
+
+/* Styles des noms et rôles des membres */
+.member-first-name,
 .member-last-name{
-    text-align: center;
-    margin: 0px 0px;
+    margin: 0;
+    color: #000;
 }
-.member-role{
-    text-align: center;
-    margin: 0px 0px;
+.member-role {
+    margin: 0;
+    color: #6532a8; /* Couleur des noms et rôles */
 }
+
+/* Ajout de styles pour les titres dans la description-member */
+.description-member h2 {
+    color: #555; /* Couleur du titre */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+/* Styles pour la section des vidéos */
+.video-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Styles pour les titres des vidéos */
+.video-container h2 {
+    color: #333;
+}
+
+/* Styles pour les vidéos elles-mêmes */
+.video-container video {
+    width: 100%; /* La vidéo occupe 100% de la largeur du conteneur */
+    height: auto; /* La hauteur s'ajuste automatiquement pour maintenir les proportions */
+    border-radius: 8px;
+    outline: none; /* Empêche la bordure par défaut de la balise video */
+}
+
+/* Style pour le cadre autour de la vidéo lorsqu'elle est en cours de lecture */
+.video-container video:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
