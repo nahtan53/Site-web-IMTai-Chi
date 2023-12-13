@@ -9,21 +9,90 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Mouvement 1</a></li>
-                <li><a href="#">Mouvement 2</a></li>
-                <li><a href="#">Mouvement 3</a></li>
-                <li><a href="#">Mouvement 4</a></li>
-
+                <li><a href="#" onclick="changeVideo(0)">Mouvement 1</a></li>
+                <li><a href="groupe12.html">Groupe 13</a></li>
+                <li><a href="index.html">IMTaichi</a></li>
             </ul>
         </nav>
     </header>
 
-    <video width="320" height="240" controls>
-        <source src="media/VIDEO1.mp4" type=video/mp4>
-      </video>
+    <main>
+        <!-- Section pour le Mouvement Initial -->
+        <section class="video-container">
+            <h2><span id="videoTitle">Mouvement 1</span></h2>
+            <video id="videoPlayer" controls>
+                <source src="media/videos groupe 12/VIDEO1.mp4" type="video/mp4">
+            </video>
+
+            <!-- Navigation entre les mouvements -->
+            <div class="navigation">
+                <button class="nav-button" onclick="changeVideo(previousIndex())">Précédent</button>
+                <button class="other-button" onclick="toggleAnalysis()">Afficher l'analyse</button>
+                <button class="other-button" onclick="hideAnalysis()">Hide</button>
+                <button class="nav-button" onclick="changeVideo(nextIndex())">Suivant</button>
+            </div>
+        </section>
+    </main>
+
 
     <footer>
        
     </footer>
+
+    <script>
+        var videos = [
+            "media/videos groupe 12/VIDEO1.mp4",
+            
+        ];
+
+        var currentIndex = 0;
+
+        function changeVideo(index) {
+            // Vérifier les limites de l'index
+            if (index >= 0 && index < videos.length) {
+                // Mettre à jour l'index actuel
+                currentIndex = index;
+
+                // Obtenir l'élément vidéo
+                var videoPlayer = document.getElementById('videoPlayer');
+
+                // Changer la source de la vidéo
+                videoPlayer.src = videos[currentIndex];
+
+                // Obtenir l'élément du titre
+                var videoTitle = document.getElementById('videoTitle');
+
+                // Mettre à jour le titre du mouvement
+                videoTitle.textContent = "Mouvement " + (currentIndex + 1);
+
+                // Recharger et lire la vidéo
+                videoPlayer.load();
+                videoPlayer.play();
+            }
+        }
+
+        function nextIndex() {
+            // Incrémenter l'index et revenir au début si nécessaire
+            currentIndex = (currentIndex + 1) % videos.length;
+            return currentIndex;
+        }
+
+        function previousIndex() {
+            // Décrémenter l'index et revenir à la fin si nécessaire
+            currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+            return currentIndex;
+        }
+
+        function toggleAnalysis() {
+            console.log("Afficher l'analyse");
+        }
+
+        function hideAnalysis() {
+            console.log("Hide");
+        }
+    </script>
 </body>
 </html>
+
+
+
