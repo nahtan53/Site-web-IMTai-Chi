@@ -116,6 +116,14 @@ button {
 
 /**************************** EQUIPES ****************************/
 
+
+/* Styles de la section des équipes*/
+#Equipe12{
+    margin: 40px;
+}
+#Equipe13{
+    margin: 40px;
+}
 /* Styles du conteneur d'équipes */
 .team-container {
     display: flex;
