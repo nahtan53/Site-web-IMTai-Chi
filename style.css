@@ -37,7 +37,7 @@ nav {
     overflow: hidden;
     background-color: #333; /* Couleur de fond de la barre de navigation */
     position: fixed;
-    opacity: 0.9;
+    opacity: 1;
     width: 100%;
 }
 
