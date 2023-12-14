@@ -6,31 +6,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Header -->    
     <header>
         <nav>
             <ul>
-                <li><a href="#" onclick="changeVideo(0)">Mouvement 1</a></li>
                 <li><a href="groupe13.html">Groupe 13</a></li>
                 <li id="logo"><a href="index.html">IMTaichi</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="Description projet groupe 12">
-        <div id="Description_groupe_12">
-            <h2>Groupe 12</h2>
-            <p>Le projet de l'équipe 12 est de réaliser une captation du mouvemebvjhdsbjksvnbdsjvbfkv</p>
-        </div>
-
+    
     <main>
-        <!-- Section pour le Mouvement Initial -->
+
+<!-- Description Projet 12 -->
+        <section id="description-projet-groupe-12">
+            <div id="description-groupe-12">
+                <h1 class="titre-groupe-12">Groupe 12</h1>
+                <p>Le projet de l'équipe 12 est de réaliser une captation du mouvemebvjhdsbjksvnbdsjvbfkv</p>
+            </div>
+        </section>
+
+<!-- Boutton pour accéder aux différentes fonctions -->
+        <section class="navigation">
+            <div class="navigation-function">
+                <button class="button" onclick="window.location.href='#video-container'">Analyse du mouvement</button>
+                <button class="button" onclick="window.location.href='#video-container'">Comparaison du mouvement</button>
+            </div>
+        </section>
+
+
+<!-- Section pour le Mouvement Initial -->
         <section class="video-container">
             <h2><span id="videoTitle">Mouvement 1</span></h2>
             <video id="videoPlayer" controls>
                 <source src="media/videos groupe 12/VIDEO1.mp4" type="video/mp4">
             </video>
 
-            <!-- Navigation entre les mouvements -->
+<!-- Navigation entre les mouvements -->
             <div class="navigation">
                 <button class="nav-button" onclick="changeVideo(previousIndex())">Précédent</button>
                 <button class="other-button" onclick="toggleAnalysis()">Afficher l'analyse</button>
@@ -38,6 +51,7 @@
                 <button class="nav-button" onclick="changeVideo(nextIndex())">Suivant</button>
             </div>
         </section>
+
     </main>
 
 

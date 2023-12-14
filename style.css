@@ -27,7 +27,7 @@ h2 {
 /* Styles des liens */
 a {
     text-decoration: none;
-    color: #0066cc; /* Couleur des liens */
+    color: rgb(255, 255, 255); /* Couleur des liens */
 }
 
 /**************************** NAVBAR ****************************/
@@ -78,19 +78,19 @@ header li a {
 h1 {
     font-family: 'Dancing Script', cursive;
     text-align: center;
-    color: #a09f9c; /* Couleur du titre principal */
+    color: #ffffff; /* Couleur du titre principal */
     font-size: 6em;
     margin-top: 110px;
 }
 
 /* Styles des boutons */
-button {
+.button {
     display: inline-block;
-    background-color: rgb(118, 130, 163); /* Couleur du bouton */
-    border-radius: 10px;
-    color: #333; /* Couleur du texte du bouton */
+    background-color: #333; /* Couleur du bouton */
+    border-radius: 1em;
+    color: rgb(255, 255, 255); /* Couleur du texte du bouton */
     text-align: center;
-    font-size: 28px;
+    font-size: 26px;
     padding: 10px; /* Espacement interne du bouton */
     width: 200px;
     -webkit-transition: all 0.5s;
@@ -101,6 +101,10 @@ button {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 30px; /* Espacement externe du bouton */
+}
+
+.button:hover{
+    background-color: #acacac;
 }
 
 /* Styles des images de description */
@@ -218,3 +222,13 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+
+/**************************** ELEMENTS PAGE GROUPE 12 ****************************/
+
+.titre-groupe-12{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: #333; /* Couleur du titre principal */
+    font-size: 6em;
+    margin-top: 110px;
+}
