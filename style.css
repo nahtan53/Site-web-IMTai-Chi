@@ -36,7 +36,7 @@ a {
 nav {
     overflow: hidden;
     background-color: #333; /* Couleur de fond de la barre de navigation */
-    position: fixed;
+    position:relative;
     opacity: 1;
     width: 100%;
 }
@@ -87,11 +87,11 @@ h1 {
 .button {
     display: inline-block;
     background-color: #333; /* Couleur du bouton */
-    border-radius: 1em;
+    border-radius: 15px;
     color: rgb(255, 255, 255); /* Couleur du texte du bouton */
     text-align: center;
-    font-size: 26px;
-    padding: 10px; /* Espacement interne du bouton */
+    font-size: 23px;
+    padding: 16px; /* Espacement interne du bouton */
     width: 200px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -101,10 +101,12 @@ h1 {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 30px; /* Espacement externe du bouton */
+    font-family: 'Advent Pro', sans-serif;
 }
 
 .button:hover{
     background-color: #acacac;
+    transform: scale(1.2);
 }
 
 /* Styles des images de description */
@@ -116,6 +118,14 @@ h1 {
     border: 2px solid #333; /* Bordure autour de l'image */
     border-radius: 10px;
     overflow: hidden;
+}
+
+#Description_IMT_Atlantique{
+    font-size: 18px;
+}
+
+#Description-Ecole-Wushu{
+    font-size: 18px;
 }
 
 /**************************** EQUIPES ****************************/
@@ -199,7 +209,6 @@ h1 {
 .video-container {
     margin: 20px;
     padding: 20px;
-    border: 2px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -212,7 +221,7 @@ h1 {
 /* Styles pour les vidéos elles-mêmes */
 .video-container video {
     width: 100%; /* La vidéo occupe 100% de la largeur du conteneur */
-    height: auto; /* La hauteur s'ajuste automatiquement pour maintenir les proportions */
+    height: 700px; /* La hauteur s'ajuste automatiquement pour maintenir les proportions */
     border-radius: 8px;
     outline: none; /* Empêche la bordure par défaut de la balise video */
 }
@@ -222,6 +231,50 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.container{
+    width: 735px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container video {
+    transition: transform 0.3s ease;
+  }
+  
+  .container video:hover {
+    transform: scale(1.2);
+  }
+
+.row-container{
+    display: flex;
+    flex-direction: row;
+    margin : 70px 0px 70px 0px;
+}
+
+.button-video {
+    display: inline-block;
+    background-color: #bebdbd; /* Couleur du bouton */
+    border-radius: 15px;
+    color: rgb(255, 255, 255); /* Couleur du texte du bouton */
+    text-align: center;
+    font-size: 15px;
+    padding: 16px; /* Espacement interne du bouton */
+    width: 200px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: 'Advent Pro', sans-serif;
+    margin: 35px;
+}
+
+.button-video:hover{
+    background-color: #979797;
+    transform: scale(1.2);
+}
 
 /**************************** ELEMENTS PAGE GROUPE 12 ****************************/
 
@@ -232,3 +285,18 @@ h1 {
     font-size: 6em;
     margin-top: 110px;
 }
+#description-groupe-12{
+    margin: 0px 80px 0px 80px;
+}
+#description-groupe-12 p {
+    font-size: 18px;
+}
+.navigation{
+    margin: 30px 0px 0px 0px; 
+}
+.navigation-function{
+    display: inline-block;
+    text-align: center;
+    width: 1470px;
+}
+

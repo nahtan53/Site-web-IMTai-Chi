@@ -11,19 +11,18 @@
         <nav>
             <ul>
                 <li><a href="groupe13.html">Groupe 13</a></li>
-                <li id="logo"><a href="index.html">IMTaichi</a></li>
+                <li id="logo"><a href="index.html">IMTai Chi</a></li>
             </ul>
         </nav>
     </header>
 
     
     <main>
-
 <!-- Description Projet 12 -->
         <section id="description-projet-groupe-12">
+            <h1 class="titre-groupe-12">Groupe 12</h1>
             <div id="description-groupe-12">
-                <h1 class="titre-groupe-12">Groupe 12</h1>
-                <p>Le projet de l'équipe 12 est de réaliser une captation du mouvemebvjhdsbjksvnbdsjvbfkv</p>
+                <p>Le projet du groupe 12, qui s’intitule «Analyse et représentation de la dynamique de mouvements d'arts martiaux (Tai Chi) », consiste à réaliser deux fonctions de représentation 3D pour mieux comprendre la nature des mouvements de Tai Chi. La première permet de comparer 2 personnes réalisant le même mouvement. La seconde fonction permet d’analyser l’évolution de différentes caractéristiques du mouvement tel que le centre de gravité. L’’idée est de donner des clés pour réussir le mouvement de manière ludique. </p>
             </div>
         </section>
 
@@ -38,17 +37,29 @@
 
 <!-- Section pour le Mouvement Initial -->
         <section class="video-container">
-            <h2><span id="videoTitle">Mouvement 1</span></h2>
-            <video id="videoPlayer" controls>
-                <source src="media/videos groupe 12/VIDEO1.mp4" type="video/mp4">
-            </video>
-
-<!-- Navigation entre les mouvements -->
-            <div class="navigation">
-                <button class="nav-button" onclick="changeVideo(previousIndex())">Précédent</button>
-                <button class="other-button" onclick="toggleAnalysis()">Afficher l'analyse</button>
-                <button class="other-button" onclick="hideAnalysis()">Hide</button>
-                <button class="nav-button" onclick="changeVideo(nextIndex())">Suivant</button>
+            <div class="row-container">
+                <div class="container">
+                    <h2>Mouvement 1</h2>
+                    <video id="videoPlayer" src="media/videos groupe 12/video1.mp4" type="video/mp4" controls title="Mouvement 1"></video>
+                    <button class="button-video" >Visualisation 3D</button>
+                </div>
+                <div class="container">
+                    <h2>Mouvement 2</h2>
+                    <video id="videoPlayer" src="media/videos groupe 12/video2.mp4" type="video/mp4" controls title="Mouvement 2"></video>
+                    <button class="button-video" >Visualisation 3D</button>
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="container">
+                    <h2>Mouvement 3</h2>
+                    <video id="videoPlayer" src="media/videos groupe 12/video3.mp4" type="video/mp4" controls title="Mouvement 3"></video>
+                    <button class="button-video" >Visualisation 3Dt</button>
+                </div>
+                <div class="container">
+                    <h2>Mouvement 4</h2>
+                    <video id="videoPlayer" src="media/videos groupe 12/video4.mp4" type="video/mp4" controls title="Mouvement 4"></video>
+                    <button class="button-video" >Visualisation 3D</button>
+                </div>
             </div>
         </section>
 
@@ -61,8 +72,12 @@
 
     <script>
         var videos = [
-            "media/videos groupe 12/VIDEO1.mp4",
-            
+            "media/videos groupe 12/video1.mp4",
+            "media/videos groupe 12/video2.mp4",
+            "media/videos groupe 12/video3.mp4",
+            "media/videos groupe 12/video4.mp4",
+
+
         ];
 
         var currentIndex = 0;
