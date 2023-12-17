@@ -295,8 +295,10 @@ h1 {
     margin: 30px 0px 0px 0px; 
 }
 .navigation-function{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     text-align: center;
-    width: 1470px;
+    justify-content: center;
+    align-items: center;
 }
 
