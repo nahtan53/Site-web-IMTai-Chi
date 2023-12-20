@@ -237,6 +237,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0px 25px 0px 25px;
 }
 
 .container video {
@@ -244,7 +245,7 @@ h1 {
   }
   
   .container video:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 
 .row-container{
@@ -274,6 +275,12 @@ h1 {
 .button-video:hover{
     background-color: #979797;
     transform: scale(1.2);
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    
 }
 
 /**************************** ELEMENTS PAGE GROUPE 12 ****************************/

@@ -40,25 +40,37 @@
             <div class="row-container">
                 <div class="container">
                     <h2>Mouvement 1</h2>
-                    <video id="videoPlayer" src="media/videos groupe 12/video1.mp4" type="video/mp4" controls title="Mouvement 1"></video>
-                    <button class="button-video" >Visualisation 3D</button>
+                    <video id="videoPlayer1" src="media/videos groupe 12/video1.mp4" type="video/mp4" controls title="Mouvement 1 : Wai Bai Tui"></video>
+                    <div class="button-container">
+                        <button class="button-video" onclick="changeVideo(1)">Mouvement réel</button>
+                        <button class="button-video" onclick="changeVideo(5)">Visualisation 3D</button>
+                    </div>
                 </div>
                 <div class="container">
                     <h2>Mouvement 2</h2>
-                    <video id="videoPlayer" src="media/videos groupe 12/video2.mp4" type="video/mp4" controls title="Mouvement 2"></video>
-                    <button class="button-video" >Visualisation 3D</button>
+                    <video id="videoPlayer2" src="media/videos groupe 12/video2.mp4" type="video/mp4" controls title="Mouvement 2"></video>
+                    <div class="button-container">
+                        <button class="button-video" onclick="changeVideo(2)">Mouvement réel</button>
+                        <button class="button-video" onclick="changeVideo(6)">Visualisation 3D</button>
+                    </div>
                 </div>
             </div>
             <div class="row-container">
                 <div class="container">
                     <h2>Mouvement 3</h2>
-                    <video id="videoPlayer" src="media/videos groupe 12/video3.mp4" type="video/mp4" controls title="Mouvement 3"></video>
-                    <button class="button-video" >Visualisation 3Dt</button>
+                    <video id="videoPlayer3" src="media/videos groupe 12/video3.mp4" type="video/mp4" controls title="Mouvement 3"></video>
+                    <div class="button-container">
+                        <button class="button-video" onclick="changeVideo(3)">Mouvement réel</button>
+                        <button class="button-video" onclick="changeVideo(7)">Visualisation 3D</button>
+                    </div>
                 </div>
                 <div class="container">
                     <h2>Mouvement 4</h2>
-                    <video id="videoPlayer" src="media/videos groupe 12/video4.mp4" type="video/mp4" controls title="Mouvement 4"></video>
-                    <button class="button-video" >Visualisation 3D</button>
+                    <video id="videoPlayer4" src="media/videos groupe 12/video4.mp4" type="video/mp4" controls title="Mouvement 4"></video>
+                    <div class="button-container">
+                        <button class="button-video" onclick="changeVideo(4)">Mouvement réel</button>
+                        <button class="button-video" onclick="changeVideo(8)">Visualisation 3D</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -76,34 +88,43 @@
             "media/videos groupe 12/video2.mp4",
             "media/videos groupe 12/video3.mp4",
             "media/videos groupe 12/video4.mp4",
-
-
+            "media/videos groupe 12/YanShouHongChui.mp4",
+            "media/videos groupe 12/ChanSiJing_Pro.mp4",
+            "media/videos groupe 12/WaiBaiTui.mp4",
+            "media/videos groupe 12/BaiYuanXianGuo.mp4",
         ];
 
         var currentIndex = 0;
 
         function changeVideo(index) {
-            // Vérifier les limites de l'index
-            if (index >= 0 && index < videos.length) {
-                // Mettre à jour l'index actuel
-                currentIndex = index;
+            
+                if (index == 1 || index == 5){
+                    var videoPlayer1 = document.getElementById('videoPlayer1');
+                    videoPlayer1.src = videos[index];
+                    videoPlayer1.load();
+                    videoPlayer1.play();
+                }
+                if (index == 2 || index == 6){
+                    var videoPlayer2 = document.getElementById('videoPlayer2');
+                    videoPlayer2.src = videos[index];
+                    videoPlayer2.load();
+                    videoPlayer2.play();
+                }
+                if (index == 3 || index == 7){
+                    var videoPlayer3 = document.getElementById('videoPlayer3');
+                    videoPlayer3.src = videos[index];
+                    videoPlayer3.load();
+                    videoPlayer3.play();
+                }
+                if (index == 4 || index == 8){
+                    var videoPlayer4 = document.getElementById('videoPlayer4');
+                    videoPlayer4.src = videos[index];
+                    videoPlayer4.load();
+                    videoPlayer4.play();
+                }
+                
 
-                // Obtenir l'élément vidéo
-                var videoPlayer = document.getElementById('videoPlayer');
-
-                // Changer la source de la vidéo
-                videoPlayer.src = videos[currentIndex];
-
-                // Obtenir l'élément du titre
-                var videoTitle = document.getElementById('videoTitle');
-
-                // Mettre à jour le titre du mouvement
-                videoTitle.textContent = "Mouvement " + (currentIndex + 1);
-
-                // Recharger et lire la vidéo
-                videoPlayer.load();
-                videoPlayer.play();
-            }
+               
         }
 
         function nextIndex() {
