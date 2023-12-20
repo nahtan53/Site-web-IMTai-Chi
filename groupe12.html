@@ -27,16 +27,20 @@
         </section>
 
 <!-- Boutton pour accéder aux différentes fonctions -->
+<!-- Boutton pour accéder aux différentes fonctions -->
         <section class="navigation">
             <div class="navigation-function">
-                <button class="button" onclick="window.location.href='#video-container'">Analyse du mouvement</button>
-                <button class="button" onclick="window.location.href='#video-container'">Comparaison du mouvement</button>
+                <button class="button" onclick="window.scrollTo(0, document.getElementById('titre-partie1').offsetTop)">Analyse du mouvement</button>
+                <button class="button" onclick="window.scrollTo(0, document.getElementById('titre-partie2').offsetTop)">Comparaison du mouvement</button>
             </div>
         </section>
 
 
 <!-- Section pour le Mouvement Initial -->
-        <section class="video-container">
+        <section id="video-container">
+            <div class="row-container">
+                <h3 id="titre-partie1">Analyse du mouvement</h3>
+            </div>
             <div class="row-container">
                 <div class="container">
                     <h2>Mouvement 1 : Wai Bai Tui</h2>
@@ -74,6 +78,17 @@
                 </div>
             </div>
         </section>
+
+        <section class="video-container">
+            <div class="row-container">
+                <h3 id="titre-partie2">Comparaison du mouvement</h3>
+            </div>
+            <div class="container-comparaison">
+                <h2>Mouvement 1</h2>
+                <video id="videoPlayer1" src="media/videos groupe 12/video comparaison.mp4" type="video/mp4" controls title="Mouvement 1"></video>
+            </div>
+        </section>
+
 
     </main>
 

@@ -251,7 +251,8 @@ h1 {
 .row-container{
     display: flex;
     flex-direction: row;
-    margin : 70px 0px 70px 0px;
+    margin : 50px 0px 50px 0px;
+    justify-content: center;
 }
 
 .button-video {
@@ -280,8 +281,9 @@ h1 {
 .button-container{
     display: flex;
     flex-direction: row;
-    
+
 }
+
 
 /**************************** ELEMENTS PAGE GROUPE 12 ****************************/
 
@@ -308,4 +310,14 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+h3{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2.5em;
+    color: #555; /* Couleur du titre */
+}
+
+
 
