@@ -17,6 +17,15 @@
             padding: 10px;
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
         nav ul {
             list-style: none;
             margin: 0;
@@ -81,97 +90,106 @@
             cursor: pointer;
             margin-left: 10px;
         }
+
+        .logo-container {
+            float: right;
+            margin-right: 0px;
+        }
+
+        #logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        /* Nouveaux styles pour la section des images et boutons */
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            margin: 0 10px;
+            text-align: center;
+            height: 300px; /* Set a fixed height for the image container */
+            display: flex;
+            flex-direction: column;
+    }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%; /* Make sure the image doesn't exceed the container height */
+            object-fit: cover; /* Scale the image to cover the container */
+        }
+
+        .button-container {
+            margin-top: 10px;
+        }
+        .right-margin {
+            margin-right: 30px;
+        }
+        .image-title {
+            color: #1f1d1d;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#" onclick="changeVideo(0)">Mouvement 1</a></li>
-                <li><a href="#" onclick="changeVideo(1)">Mouvement 2</a></li>
-                <li><a href="#" onclick="changeVideo(2)">Mouvement 3</a></li>
-                <li><a href="#" onclick="changeVideo(3)">Mouvement 4</a></li>
+                <li><a href="#" onclick="window.location.href = 'groupe13.html'">Mouvement 1 : Cercles </a></li>
+                <li><a href="#" onclick="window.location.href = 'mouvement2.html'">Mouvement 2 : Clé en Z</a></li>
+                <li><a href="#" onclick="window.location.href = 'mouvement3.html'">Mouvement 3 : Lu Chen </a></li>
+                <li><a href="#" onclick="window.location.href = 'mouvement4.html'">Mouvement 4 : Lu Yang</a></li>
+                <li><a href="#" >  </a></li>
+                <li><a href="#" >  </a></li>
+
+                <li><a href="groupe12.html" class="right-margin"> Projet 12</a></li>
+
             </ul>
+              
+            <div id="logo-container" class="logo-container">
+                <a href="index.html"><img src="media/Pageprincipale.png" alt="Logo Maison"></a>
+            </div> 
+             
         </nav>
     </header>
 
     <main>
         <!-- Section pour le Mouvement 1 -->
-        <section class="video-container">
-            <h2><span id="videoTitle">Mouvement 1</span></h2>
-            <video id="videoPlayer" controls>
-                <source src="media/videos/Tours.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la balise video.
-            </video>
+        <section id="imageSection" class="image-section">
+            <div class="image-container">
+                <div class="image-title">Vidéo 1</div>
 
-            <!-- Navigation entre les mouvements -->
-            <div class="navigation">
-                <button class="nav-button" onclick="changeVideo(previousIndex())">Précédent</button>
-                <button class="other-button" onclick="toggleAnalysis()">Afficher l'analyse</button>
-                <button class="other-button" onclick="hideAnalysis()">Hide</button>
-                <button class="nav-button" onclick="changeVideo(nextIndex())">Suivant</button>
+                <img src="media/taichi3.jpg" alt="Image 1">
+
+                <div class="button-container">
+                    <button class="nav-button" onclick="window.location.href = '11A.html'">Regarder avec analyse</button>
+                    <button class="other-button" onclick="window.location.href = '11.html'">Regarder sans analyse</button>
+                </div>
             </div>
+            <div class="image-container">
+                <div class="image-title">Vidéo 2</div>
+
+                <img src="media/Tai Chi.jpeg" alt="Image 2">
+                <div class="button-container">
+                    <button class="nav-button" onclick="window.location.href = '12A.html'">Regarder avec analyse</button>
+                    <button class="other-button" onclick="window.location.href = '12.html'">Regarder sans analyse</button>
+                </div>
+            </div>
+            
         </section>
+
+    
     </main>
 
     <footer>
-        <p>&copy; 2023 Interface Groupe 13. Tous droits réservés.</p>
     </footer>
 
-    <!-- Script JavaScript pour la navigation entre les vidéos -->
-    <script>
-        var videos = [
-            "media/videos/Tours.mp4",
-            "media/videos/mouvement2.mp4",
-            "media/videos/mouvement3.mp4",
-            "media/videos/mouvement4.mp4"
-        ];
-
-        var currentIndex = 0;
-
-        function changeVideo(index) {
-            // Vérifier les limites de l'index
-            if (index >= 0 && index < videos.length) {
-                // Mettre à jour l'index actuel
-                currentIndex = index;
-
-                // Obtenir l'élément vidéo
-                var videoPlayer = document.getElementById('videoPlayer');
-
-                // Changer la source de la vidéo
-                videoPlayer.src = videos[currentIndex];
-
-                // Obtenir l'élément du titre
-                var videoTitle = document.getElementById('videoTitle');
-
-                // Mettre à jour le titre du mouvement
-                videoTitle.textContent = "Mouvement " + (currentIndex + 1);
-
-                // Recharger et lire la vidéo
-                videoPlayer.load();
-                videoPlayer.play();
-            }
-        }
-
-        function nextIndex() {
-            // Incrémenter l'index et revenir au début si nécessaire
-            currentIndex = (currentIndex + 1) % videos.length;
-            return currentIndex;
-        }
-
-        function previousIndex() {
-            // Décrémenter l'index et revenir à la fin si nécessaire
-            currentIndex = (currentIndex - 1 + videos.length) % videos.length;
-            return currentIndex;
-        }
-
-        function toggleAnalysis() {
-            console.log("Afficher l'analyse");
-        }
-
-        function hideAnalysis() {
-            console.log("Hide");
-        }
-    </script>
+    
 </body>
 </html>
