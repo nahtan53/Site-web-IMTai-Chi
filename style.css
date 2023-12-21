@@ -332,3 +332,13 @@ h3{
     font-size: 2.5em;
     color: #555; /* Couleur du titre */
 }
+
+
+
+h3{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2.5em;
+    color: #555; /* Couleur du titre */
+}
